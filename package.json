@@ -1,5 +1,5 @@
 {
-  "name": "forms",
+  "name": "BusED",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -15,7 +15,7 @@
     "@angular/common": "^6.0.0",
     "@angular/compiler": "^6.0.0",
     "@angular/core": "^6.0.0",
-    "@angular/forms": "^6.0.0",
+    "@angular/BusED": "^6.0.0",
     "@angular/http": "^6.0.0",
     "@angular/platform-browser": "^6.0.0",
     "@angular/platform-browser-dynamic": "^6.0.0",
@@ -39,7 +39,7 @@
     "codelyzer": "~4.2.1",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
-    "karma": "^2.0.2",
+    "karma": "^2.0.3",
     "karma-chrome-launcher": "~2.2.0",
     "karma-coverage-istanbul-reporter": "~1.4.2",
     "karma-jasmine": "~1.1.1",
