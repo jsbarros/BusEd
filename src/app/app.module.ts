@@ -16,6 +16,10 @@ import { CadastroMotoristaComponent } from './cadastro-motorista/cadastro-motori
 import { LoginComponent } from './login/login.component';
 import { routing } from './app.routing';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { CadastroOnibusComponent } from './cadastro-onibus/cadastro-onibus.component';
+import { CadastroRotaComponent } from './cadastro-rota/cadastro-rota.component';
+import { CadastroFaculdadeComponent } from './cadastro-faculdade/cadastro-faculdade.component';
+import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
 
 
 
@@ -37,7 +41,11 @@ var firebaseConfig = {
     CadastroAlunoComponent,
     CadastroMotoristaComponent,
     LoginComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    CadastroOnibusComponent,
+    CadastroRotaComponent,
+    CadastroFaculdadeComponent,
+    ListaUsuariosComponent
   ],
   imports: [
     FormsModule,
