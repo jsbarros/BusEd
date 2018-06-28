@@ -58,6 +58,11 @@ export class CadastroMotoristaComponent implements OnInit {
     // });
 
     // patchValue() adiciona o valor de apenas alguns campos ao formulário
+    
+    
+    formulario.form.patchValue({
+      tipo: "motorista"
+    });
 
     formulario.form.patchValue({
       cep: dados.cep,

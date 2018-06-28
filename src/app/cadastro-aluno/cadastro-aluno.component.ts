@@ -66,7 +66,8 @@ export class CadastroAlunoComponent implements OnInit {
       rua: dados.logradouro,
       bairro: dados.bairro,
       cidade: dados.localidade,
-      estado: dados.uf
+      estado: dados.uf,
+      tipo: "aluno"
     });
     
   }
