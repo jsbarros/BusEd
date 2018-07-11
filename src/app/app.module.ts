@@ -1,3 +1,4 @@
+import { BootstrapModule } from './bootstrap/bootstrap.module';
 import { AuthGuard } from './core/auth.guard';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/BusED';
@@ -20,7 +21,7 @@ import { CadastroOnibusComponent } from './cadastro-onibus/cadastro-onibus.compo
 import { CadastroRotaComponent } from './cadastro-rota/cadastro-rota.component';
 import { CadastroFaculdadeComponent } from './cadastro-faculdade/cadastro-faculdade.component';
 import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
-
+import { SobreComponent } from './sobre/sobre.component';
 
 
 // Initialize Firebase
@@ -45,7 +46,8 @@ var firebaseConfig = {
     CadastroOnibusComponent,
     CadastroRotaComponent,
     CadastroFaculdadeComponent,
-    ListaUsuariosComponent
+    ListaUsuariosComponent,
+    SobreComponent
   ],
   imports: [
     FormsModule,
@@ -55,6 +57,7 @@ var firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),  // Add this
     AngularFirestoreModule,                           // And this
     CoreModule,
+    BootstrapModule,
     routing
   ],
   providers: [AuthGuard],

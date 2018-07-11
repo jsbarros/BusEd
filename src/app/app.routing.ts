@@ -1,3 +1,4 @@
+import { SobreComponent } from './sobre/sobre.component';
 import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
 import { CadastroFaculdadeComponent } from './cadastro-faculdade/cadastro-faculdade.component';
 import { CadastroRotaComponent } from './cadastro-rota/cadastro-rota.component';
@@ -20,7 +21,8 @@ const APP_ROUTES: Routes = [
     { path: 'cadastrofaculdade', component: CadastroFaculdadeComponent, canActivate: [AuthGuard]},
     { path: 'usuarios', component: ListaUsuariosComponent, canActivate: [AuthGuard]},
     { path: 'login', component: LoginComponent },
-    { path: 'perfil', component: UserProfileComponent, canActivate: [AuthGuard] }
+    { path: 'perfil', component: UserProfileComponent, canActivate: [AuthGuard] },
+    { path: 'sobre', component: SobreComponent }
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES);

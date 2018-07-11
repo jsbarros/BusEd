@@ -9,7 +9,10 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-              <a routerLink="/login" class="nav-link">Adm</a>
+              <a routerLink="/login" class="nav-link">Login</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+            <a routerLink="/sobre" class="nav-link">Sobre</a>
           </li>
         </ul>
       </div>
@@ -24,29 +27,38 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item" routerLinkActive="active">
-              <a routerLink="/cadastroaluno" class="nav-link">Cadastro Aluno</a>
+          <ul class="nav navbar-nav">
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cadastrar</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" routerLink="/cadastroaluno">Aluno</a>
+                <a class="dropdown-item" routerLink="/cadastromotorista">Motorista</a>
+                <a class="dropdown-item" routerLink="/cadastrorota">Rota</a>
+                <a class="dropdown-item" routerLink="/cadastroonibus">Onibus</a>
+                <a class="dropdown-item" routerLink="/cadastrofaculdade">Faculdade</a>
+              </div>
             </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Listar</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" routerLink="/usuarios">Usuarios</a>
+                  <a class="dropdown-item" routerLink="/rotas">Rotas</a>
+                  <a class="dropdown-item" routerLink="/onibus">Onibus</a>
+                  <a class="dropdown-item" routerLink="/faculdades">Faculdades</a>
+                </div>
+              </li>
+              
             <li class="nav-item" routerLinkActive="active">
-              <a routerLink="/cadastromotorista" class="nav-link">Cadastro Motorista</a>
-            </li>
-            <li class="nav-item" routerLinkActive="active">
-              <a routerLink="/usuarios" class="nav-link">Lista de Usuários</a>
-            </li>
-            <li class="nav-item" routerLinkActive="active">
-              <a routerLink="/cadastrorota" class="nav-link">Cadastro Rota</a>
-            </li>
-            <li class="nav-item" routerLinkActive="active">
-              <a routerLink="/cadastroonibus" class="nav-link">Cadastro Onibus</a>
-            </li>
-            <li class="nav-item" routerLinkActive="active">
-              <a routerLink="/cadastrofaculdade" class="nav-link">Cadastro Faculdade</a>
+              <a routerLink="/sobre" class="nav-link">Sobre</a>
             </li>
             <li class="nav-item" routerLinkActive="active">
                 <a routerLink="/perfil" class="nav-link">Perfil</a>
             </li>
+
           </ul>
         </div>
     </nav>
