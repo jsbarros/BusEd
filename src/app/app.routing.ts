@@ -1,6 +1,5 @@
-import { FormDebugComponent } from './form-debug/form-debug.component';
+import { AjudaComponent } from './ajuda/ajuda.component';
 import { SobreComponent } from './sobre/sobre.component';
-import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
 import { CadastroFaculdadeComponent } from './cadastro-faculdade/cadastro-faculdade.component';
 import { CadastroRotaComponent } from './cadastro-rota/cadastro-rota.component';
 import { CadastroOnibusComponent } from './cadastro-onibus/cadastro-onibus.component';
@@ -12,6 +11,7 @@ import { CadastroAlunoComponent } from './cadastro-aluno/cadastro-aluno.componen
 import { HomeComponent } from './home/home.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/compiler/src/core';
+import { FormDebugComponent } from './form-debug/form-debug.component';
 
 const APP_ROUTES: Routes = [
     { path: '', component: HomeComponent },
@@ -23,7 +23,8 @@ const APP_ROUTES: Routes = [
     { path: 'usuarios', component: FormDebugComponent, canActivate: [AuthGuard]},
     { path: 'login', component: LoginComponent },
     { path: 'perfil', component: UserProfileComponent, canActivate: [AuthGuard] },
-    { path: 'sobre', component: SobreComponent }
+    { path: 'sobre', component: SobreComponent },
+    { path: 'ajuda', component: AjudaComponent }
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES);
