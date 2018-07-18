@@ -1,3 +1,4 @@
+import { AjudaComponent } from './ajuda/ajuda.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
 import { CadastroFaculdadeComponent } from './cadastro-faculdade/cadastro-faculdade.component';
@@ -22,7 +23,8 @@ const APP_ROUTES: Routes = [
     { path: 'usuarios', component: ListaUsuariosComponent, canActivate: [AuthGuard]},
     { path: 'login', component: LoginComponent },
     { path: 'perfil', component: UserProfileComponent, canActivate: [AuthGuard] },
-    { path: 'sobre', component: SobreComponent }
+    { path: 'sobre', component: SobreComponent },
+    { path: 'ajuda', component: AjudaComponent }
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES);
