@@ -12,6 +12,7 @@ interface Usuarios {
   bairro: string;
   cidade: string;
   estado: string;
+  tipo: string;
 }
 
 @Component({
@@ -24,7 +25,6 @@ export class FormDebugComponent implements OnInit {
   usuariosCol: AngularFirestoreCollection<Usuarios>;
   usuarios: Observable<Usuarios[]>;
 
-  @Input() form;
 
   constructor(private afs: AngularFirestore) { }
 

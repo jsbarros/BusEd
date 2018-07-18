@@ -1,3 +1,4 @@
+import { FormDebugComponent } from './form-debug/form-debug.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
 import { CadastroFaculdadeComponent } from './cadastro-faculdade/cadastro-faculdade.component';
@@ -19,7 +20,7 @@ const APP_ROUTES: Routes = [
     { path: 'cadastroonibus', component: CadastroOnibusComponent, canActivate: [AuthGuard]},
     { path: 'cadastrorota', component: CadastroRotaComponent, canActivate: [AuthGuard]},
     { path: 'cadastrofaculdade', component: CadastroFaculdadeComponent, canActivate: [AuthGuard]},
-    { path: 'usuarios', component: ListaUsuariosComponent, canActivate: [AuthGuard]},
+    { path: 'usuarios', component: FormDebugComponent, canActivate: [AuthGuard]},
     { path: 'login', component: LoginComponent },
     { path: 'perfil', component: UserProfileComponent, canActivate: [AuthGuard] },
     { path: 'sobre', component: SobreComponent }
