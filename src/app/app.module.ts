@@ -23,6 +23,7 @@ import { CadastroFaculdadeComponent } from './cadastro-faculdade/cadastro-faculd
 import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { AjudaComponent } from './ajuda/ajuda.component';
+import { CadastroPontoComponent } from './cadastro-ponto/cadastro-ponto.component';
 
 
 // Initialize Firebase
@@ -49,7 +50,8 @@ var firebaseConfig = {
     CadastroFaculdadeComponent,
     ListaUsuariosComponent,
     SobreComponent,
-    AjudaComponent
+    AjudaComponent,
+    CadastroPontoComponent
   ],
   imports: [
     FormsModule,

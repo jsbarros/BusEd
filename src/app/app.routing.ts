@@ -1,3 +1,4 @@
+import { CadastroPontoComponent } from './cadastro-ponto/cadastro-ponto.component';
 import { AjudaComponent } from './ajuda/ajuda.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { CadastroFaculdadeComponent } from './cadastro-faculdade/cadastro-faculdade.component';
@@ -24,7 +25,8 @@ const APP_ROUTES: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'perfil', component: UserProfileComponent, canActivate: [AuthGuard] },
     { path: 'sobre', component: SobreComponent },
-    { path: 'ajuda', component: AjudaComponent }
+    { path: 'ajuda', component: AjudaComponent },
+    { path: 'cadastroponto', component: CadastroPontoComponent, canActivate: [AuthGuard]}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES);

@@ -1,0 +1,58 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" class="form-horizontal">
+  <h1>Cadastro dos Pontos de Paradas</h1><br>
+  <div class="form-group row">
+    <div class="col-sm-12">
+      <label for="nome">Nome</label>
+    </div>
+    <div class="col-sm-12">
+      <input type="text" class="form-control" id="nome" placeholder="Nome" name="nome" ngModel required #nome="ngModel">
+      <div id="alerta" class="alert alert-danger" role="alert" *ngIf="!nome.valid && nome.touched">
+        Obrigatório!
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-sm-3">
+      <label for="latitude">Latitude</label>
+      <input type="text" class="form-control" id="latitude" placeholder="Latitude" name="latitude" ngModel required #latitude="ngModel">
+      <div id="alerta" class="alert alert-danger" role="alert" *ngIf="!latitude.valid && latitude.touched">
+        Obrigatório!
+      </div>
+    </div>
+
+    <div class="col-lg-3">
+      <label for="longitude" class="control-label">Longitude</label>
+      <input type="text" class="form-control" id="longitude" placeholder="Longitude" name="longitude" ngModel required #longitude="ngModel">
+      <div id="alerta" class="alert alert-danger" role="alert" *ngIf="!longitude.valid && longitude.touched">
+        Obrigatório!
+      </div>
+    </div>
+    
+
+    <div class="col-lg-12"><br>
+      <label for="descrição" class="control-label">Descrição</label>
+      <input type="text" class="form-control" id="descrição" placeholder="Descrição" name="descrição" ngModel #descrição="ngModel">
+    </div>
+  </div>
+
+  <input type="hidden" name="tipo" ngModel #tipo="ngModel"/>
+
+  <button type="submit" class="btn btn-primary" [disabled]="!f.valid" data-toggle="modal" data-target="#exampleModal">Enviar</button>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Confirmação</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>O cadastro foi realizado com sucesso!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
