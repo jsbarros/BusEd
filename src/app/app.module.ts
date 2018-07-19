@@ -1,3 +1,4 @@
+import { UsuarioService } from './services/usuario.service';
 import { BootstrapModule } from './bootstrap/bootstrap.module';
 import { AuthGuard } from './core/auth.guard';
 import { HttpClientModule } from '@angular/common/http';
@@ -20,7 +21,6 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { CadastroOnibusComponent } from './cadastro-onibus/cadastro-onibus.component';
 import { CadastroRotaComponent } from './cadastro-rota/cadastro-rota.component';
 import { CadastroFaculdadeComponent } from './cadastro-faculdade/cadastro-faculdade.component';
-import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { AjudaComponent } from './ajuda/ajuda.component';
 
@@ -47,7 +47,6 @@ var firebaseConfig = {
     CadastroOnibusComponent,
     CadastroRotaComponent,
     CadastroFaculdadeComponent,
-    ListaUsuariosComponent,
     SobreComponent,
     AjudaComponent
   ],
@@ -62,7 +61,7 @@ var firebaseConfig = {
     BootstrapModule,
     routing
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard, UsuarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
