@@ -1,19 +1,6 @@
-import { Observable } from 'rxjs';
-import { Component, OnInit, Input } from '@angular/core';
-import { AngularFirestoreCollection, AngularFirestore } from 'angularfire2/firestore';
-
-interface Usuarios {
-  nome: string;
-  email: string;
-  cep: number;
-  numero: number;
-  complemento: string;
-  rua: string;
-  bairro: string;
-  cidade: string;
-  estado: string;
-  tipo: string;
-}
+import { Component, OnInit} from '@angular/core';
+import { UsuarioService } from './../services/usuario.service';
+import { Usuario } from '../models/Usuario'
 
 @Component({
   selector: 'app-form-debug',
@@ -22,15 +9,37 @@ interface Usuarios {
 })
 export class FormDebugComponent implements OnInit {
 
-  usuariosCol: AngularFirestoreCollection<Usuarios>;
-  usuarios: Observable<Usuarios[]>;
+  usuarios: Usuario[];
+  editState: boolean = false;
+  usuarioToEdit: Usuario;
 
 
-  constructor(private afs: AngularFirestore) { }
+  constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit() {
-    this.usuariosCol = this.afs.collection('usuarios');
-    this.usuarios = this.usuariosCol.valueChanges();
+
+    this.usuarioService.getUsuarios().subscribe(usuarios => {
+      this.usuarios = usuarios;
+    });
   }
 
+  deleteUsuario(event, usuario: Usuario){
+    this.clearState();
+    this.usuarioService.deleteUsuario(usuario);
+  }
+
+  editUsuario(event, usuario: Usuario){
+    this.editState = true;
+    this.usuarioToEdit = usuario;
+  }
+
+  updadeUsuario(usuario: Usuario){
+    this.usuarioService.updateUsuario(usuario);
+    this.clearState();
+  }
+
+  clearState(){
+    this.editState = false;
+    this.usuarioToEdit = null;
+  }
 }
